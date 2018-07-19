@@ -210,7 +210,10 @@ pre {
 <section class='container'>
 
         <hgroup>
-           <h1>Welcome to your CakePHP application on OpenShift <?= getHostByName(getHostName()); ?> </h1> 
+           <h1>Welcome to your CakePHP application on OpenShift <?php
+			   $ip = getHostByName(getHostName());
+			   echo $ip;
+			   ?> </h1> 
         </hgroup>
 
         <?= $this->fetch('content') ?>
